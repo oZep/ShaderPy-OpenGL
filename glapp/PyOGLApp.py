@@ -4,6 +4,10 @@ import os
 
 class PyOGLApp():
     def __init__(self, screen_posX, screen_posY, screen_W, screen_H):
+        '''
+        initalizing Pygame and OpenGL
+        (screen position x, screen position y, screen width, screen height)
+        '''
         # screen environment
         os.environ['SDL_VIDEO_WINDOW_POS'] = "%d, %d" % (screen_posX, screen_posY)
         self.screen_W = screen_W
@@ -20,6 +24,9 @@ class PyOGLApp():
         self.clock = pygame.time.Clock()
 
     def main(self):
+        '''
+        main game loop function
+        '''
         done = False
         self.initialize()
         while not done:
